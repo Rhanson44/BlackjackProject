@@ -11,9 +11,7 @@ public abstract class Hand {
 	}
 	
 	public void drawCard(Card card) {
-		Deck deck = new Deck();
-		deck.createDeck();
-		deck.dealCard();
+		cards.add(card);
 	}
 	
 	public void clear() {
@@ -24,8 +22,7 @@ public abstract class Hand {
 
 	@Override
 	public String toString() {
-		return "Hand: " + cards;
+		return "" + cards;
 	}
-	
 	
 }

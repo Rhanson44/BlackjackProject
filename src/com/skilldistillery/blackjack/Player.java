@@ -10,16 +10,28 @@ public class Player {
 		this.hand = new BlackjackHand();
 	}
 	
-	public void drawCard(Card card) {
+	public boolean isBlackjack() {
+		return hand.isBlackjack();
+	}
+	
+	public boolean isBust() {
+		return hand.isBust();
+	}
+	
+	public void drawBlackjackCard(Card card) {
 		hand.drawCard(card);
 	}
 	
-	public int getHandValue() {
+	public int getBlackjackHandValue() {
 		return hand.getHandValue();
 	}
 	
-	public void displayHand() {
-		System.out.println(hand.getHandValue());
+	public String getFirstBlackjackCardValue() {
+		return hand.getFirstCardValue();
+	}
+	
+	public String displayHand() {
+		return "Hand: " + hand.toString() + " " + hand.getHandValue();
 	}
 
 }

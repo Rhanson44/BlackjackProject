@@ -8,6 +8,8 @@ public class Dealer extends Player{
 	
 	public Dealer() {
 		deck = new Deck();
+		deck.createDeck();
+		deck.shuffle();
 	}
 	
 	public Card dealCard() {
@@ -15,8 +17,12 @@ public class Dealer extends Player{
 	}
 	
 	@Override
-	public void displayHand() {
-		
+	public String displayHand() {
+		return "Dealer hand: " + super.getFirstBlackjackCardValue() + " [HiddenCard]";
+	}
+	
+	public String displayHiddenHand() {
+		return "Dealer " + super.displayHand();
 	}
 	
 }
