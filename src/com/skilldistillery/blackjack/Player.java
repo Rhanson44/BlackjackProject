@@ -21,6 +21,22 @@ public class Player {
 	public void drawBlackjackCard(Card card) {
 		hand.drawCard(card);
 	}
+		
+	public boolean isAce() {
+		return hand.isAce();
+	}
+	
+	public Card drawAce(int value) {
+		return hand.drawAce(value);
+	}
+	
+	public Card replaceAce(int index, int value) {
+		return hand.replaceAce(index, value);
+	}
+	
+	public boolean hasSoftAce() {
+		return hand.hasSoftAce();
+	}
 	
 	public int getBlackjackHandValue() {
 		return hand.getHandValue();
@@ -32,6 +48,10 @@ public class Player {
 	
 	public String displayHand() {
 		return "Hand: " + hand.toString() + " " + hand.getHandValue();
+	}
+	
+	public void clearHand() {
+		hand.clear();
 	}
 
 }

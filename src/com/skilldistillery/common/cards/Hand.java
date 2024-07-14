@@ -13,7 +13,7 @@ public abstract class Hand {
 	public void drawCard(Card card) {
 		cards.add(card);
 	}
-	
+		
 	public void clear() {
 		cards.clear();
 	}

@@ -8,12 +8,19 @@ public class Dealer extends Player{
 	
 	public Dealer() {
 		deck = new Deck();
-		deck.createDeck();
 		deck.shuffle();
 	}
 	
 	public Card dealCard() {
 		return deck.dealCard();
+	}
+	
+	public boolean isDeckEmpty() {
+		return deck.isDeckEmpty();
+	}
+	
+	public int checkDeckSize() {
+		return deck.checkDeckSize();
 	}
 	
 	@Override

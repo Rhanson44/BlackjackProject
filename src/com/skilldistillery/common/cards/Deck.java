@@ -8,11 +8,11 @@ public class Deck {
 	private List<Card> deck;
 
 	public Deck() {
+		deck = new ArrayList<>();
 		createDeck();
 	}
 
 	public void createDeck() {
-		deck = new ArrayList<>();
 		for (Suit suit : Suit.values()) {
 			for (Rank rank : Rank.values()) {
 				deck.add(new Card(suit, rank));
@@ -24,7 +24,7 @@ public class Deck {
 		return deck.size();
 	}
 	
-	public boolean isEmpty() {
+	public boolean isDeckEmpty() {
 		if (deck.isEmpty()) {
 			return true;
 		} else {
@@ -33,9 +33,15 @@ public class Deck {
 	}
 
 	public Card dealCard() {
-		return deck.remove(0);
+		Card c = new Card(Suit.CLUBS, Rank.FIVE);
+		if (!deck.isEmpty()) {
+			return deck.remove(0);
+		} else {
+			System.out.println("Deck empty");
+			return c;
+		}
 	}
-
+	
 	public void shuffle() {
 		Collections.shuffle(deck);
 	}
