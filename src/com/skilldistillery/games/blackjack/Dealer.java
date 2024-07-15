@@ -1,7 +1,7 @@
-package com.skilldistillery.blackjack;
+package com.skilldistillery.games.blackjack;
 
-import com.skilldistillery.common.cards.Card;
-import com.skilldistillery.common.cards.Deck;
+import com.skilldistillery.games.common.Card;
+import com.skilldistillery.games.common.Deck;
 
 public class Dealer extends Player{
 	private Deck deck;

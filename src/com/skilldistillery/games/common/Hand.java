@@ -1,4 +1,4 @@
-package com.skilldistillery.common.cards;
+package com.skilldistillery.games.common;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -19,7 +19,7 @@ public abstract class Hand {
 	}
 	
 	public abstract int getHandValue();
-
+	
 	@Override
 	public String toString() {
 		return "" + cards;

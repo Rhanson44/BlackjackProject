@@ -1,16 +1,14 @@
-package com.skilldistillery.blackjack;
+package com.skilldistillery.games.blackjack;
 
-import java.util.List;
-
-import com.skilldistillery.common.cards.Card;
-import com.skilldistillery.common.cards.Hand;
-import com.skilldistillery.common.cards.Rank;
-import com.skilldistillery.common.cards.Suit;
+import com.skilldistillery.games.common.Card;
+import com.skilldistillery.games.common.Hand;
+import com.skilldistillery.games.common.Rank;
+import com.skilldistillery.games.common.Suit;
 
 public class BlackjackHand extends Hand {
-	private List<Card> cards = super.cards;
-
+	
 	public BlackjackHand() {
+		super();
 	}
 
 	public int getHandValue() {
@@ -20,6 +18,7 @@ public class BlackjackHand extends Hand {
 		}
 		return handValue;
 	}
+	
 
 	public String getFirstCardValue() {
 		return "" + cards.get(0);

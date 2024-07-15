@@ -1,4 +1,4 @@
-package com.skilldistillery.common.cards;
+package com.skilldistillery.games.common;
 
 import java.util.Objects;
 

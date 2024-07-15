@@ -1,4 +1,4 @@
-package com.skilldistillery.common.cards;
+package com.skilldistillery.games.common;
 
 public enum Rank {
 	TWO(2), THREE(3), FOUR(4), 
